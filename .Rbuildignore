@@ -14,3 +14,7 @@
 ^pkgdown$
 ^README\.Rmd$
 ^vignettes/articles$
+
+# [LER-WINDOW REPOSITORY DELIVERY] Exclude downloadable bundle and review guide from package builds.
+^window_delivery$
+^WINDOW_CHANGES[.]md$

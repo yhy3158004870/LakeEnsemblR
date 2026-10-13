@@ -1,0 +1,198 @@
+PASS 01: complete daily sample mean
+PASS 02: right endpoint excluded for sample mean
+PASS 03: four records in a single day rejected
+PASS 04: seven of eight values missing rejected
+PASS 05: late-start window rejected
+PASS 06: duplicate timestamps rejected
+PASS 07: unsorted timestamps rejected
+PASS 08: infinity rejected
+PASS 09: declared grid checked independently of first record
+PASS 10: common-year final window 5 days
+PASS 11: leap-year final window 6 days
+PASS 12: common-year midpoint at noon only as label
+PASS 13: windows reset every Jan 1
+PASS 14: invalid MODIS DOY rejected
+PASS 15: year-end does not include next year
+PASS 16: leap-year six-day mean
+PASS 17: trapezoidal time mean exact for a linear signal
+PASS 18: linear time mean requires right bracket
+PASS 19: linear time mean rejects internal gap
+PASS 20: linear time mean rejects missing bracket value
+PASS 21: subdaily periodic signal has correct integral
+PASS 22: midnight-only daily samples are not called exact daily means
+PASS 23: end-labeled interval means
+PASS 24: center-labeled interval means
+PASS 25: start-labeled interval means
+PASS 26: interval means reject gap
+PASS 27: partial first/last interval weighted by overlap
+PASS 28: irrelevant nonfinite data outside required window allowed
+PASS 29: cross-spinup approved window rejected
+PASS 30: fully contained window selected
+PASS 31: unapproved ice flag rejected
+PASS 32: duplicate window ID rejected
+PASS 33: overlapping approved windows rejected
+PASS 34: daily MyLake contract accepted
+PASS 35: artificial subdaily MyLake rejected
+PASS 36: unconfirmed contract rejected for production
+PASS 37: strict datetime format rejects trailing junk
+PASS 38: constant predictions retain valid RMSE despite undefined correlation
+PASS 39: metric NA is not silently removed
+PASS 40: bias sign is model minus observation
+PASS 41: LHC one point in every linear marginal stratum
+PASS 42: LHC one point in every logarithmic marginal stratum
+PASS 43: LHC exact seeded repeatability
+PASS 44: LHC model-specific parameter pools accepted
+PASS 45: out-of-bound parameter rejected
+PASS 46: duplicate par_id rejected
+PASS 47: scoring and prediction share one operator
+
+All 47 real-R numerical tests passed in this R session.
+PASS R01: YAML first-level map uses three-space indentation
+PASS R02: YAML logical scalars use true/false spelling
+PASS R03: YAML scalar values roundtrip without numeric/boolean coercion
+PASS R04: YAML special Windows path and escaped string roundtrip
+PASS R05: YAML absent file is the LER NULL sentinel; ordinary NULL remains NULL
+PASS R06: YAML numeric sequence and slash-key calibration roundtrip
+PASS R07: gotmtools reads a three-space numeric scalar
+PASS R08: gotmtools reads true/false scalars as logical values
+PASS R09: gotmtools reads NULL file sentinel and safe relative paths
+PASS R10: gotmtools reads numeric/character YAML sequences
+PASS R11: gotmtools preserves the timestamp scalar
+PASS R12: snapshot replaces special input names by gotmtools-safe relative paths
+PASS R13: snapshot special-name input copies preserve SHA256 byte checksums
+PASS R14: snapshot retains an optional absent file as the LER NULL sentinel
+PASS R15: gotmtools can read the renamed snapshot input path
+PASS R16: unchanged snapshot passes the complete file manifest check
+PASS R17: same-size snapshot input edit is rejected by SHA256 verification
+PASS R18: unrecorded snapshot file is rejected by manifest verification
+PASS R19: function fingerprint is stable after the function is called
+PASS R20: function fingerprint is stable after byte-code compilation
+PASS R21: source-reference metadata does not change the fingerprint
+PASS R22: body change is detected by the fingerprint
+PASS R23: formal-argument change is detected by the fingerprint
+PASS R24: candidate seed is a valid stable R integer
+PASS R25: candidate seed distinguishes model and parameter identifier
+PASS R26: candidate RNG draws repeat and restore caller seed
+PASS R27: candidate RNG restores caller state when execution fails
+PASS R28: candidate RNG does not create a persistent seed when caller had none
+PASS R29: MyLake global guard restores old objects and removes introduced objects
+PASS R30: MyLake global guard restores caller objects after an error
+PASS R31: PSOCK runtime attaches LER and exposes both lazy-data dictionaries
+PASS R32: candidate RNG is identical in serial/PSOCK despite reversed scheduling
+PASS R33: FLake subdaily absolute timestamps are not shifted twice at 06:00
+PASS R34: FLake daily labels preserve the documented output-hour adjustment
+
+All 34 v0.1.0-defect regression checks passed.
+Synthetic reader/RNG tests do not establish physical validity or Windows binary compatibility.
+PASS Wan 01: 46 windows per year and keyed joins across reordered files
+PASS Wan 02: raw source token retained and missing source propagated
+PASS Wan 03: DN raw requires both channels; no single-channel fallback
+PASS Wan 04: missing raw establishes gap flags, not rounding differences
+PASS Wan 05: all six channels and original source checksums retained
+PASS Wan 06: no record receives automatic approval
+PASS Wan 07: common-year final window lasts 5 days
+PASS Wan 08: leap-year final window lasts 6 days
+PASS Wan 09: first window resets on Jan 1 rather than a multi-year 8-day grid
+PASS Wan 10: Celsius source declaration required and no implicit scaling
+PASS Wan 11: mixed and duplicate year split assignments rejected
+PASS Wan 12: missing NAME_ID fails instead of another lake fallback
+PASS Wan 13: only approved records exported with disjoint year labels
+PASS Wan 14: raw two-channel proxy preserved numerically
+PASS Wan 15: unknown open-water cannot become approved
+PASS Wan 16: approval requires recorded scientific basis
+PASS Wan 17: raw proxy with a missing channel remains unusable
+PASS Wan 18: filled/filter raw gaps cannot enter by default
+PASS Wan 19: global gap permission alone is insufficient
+PASS Wan 20: explicit global and row-level permission preserves reconstructed origin
+PASS Wan 21: filter use remains labelled even with available raw channels
+PASS Wan 22: splitting adjacent windows in one year is rejected
+PASS Wan 23: alternate year spelling cannot bypass whole-year split
+PASS Wan 24: review dropping a row is rejected
+PASS Wan 25: duplicate review keys rejected
+PASS Wan 26: window-boundary tampering rejected
+PASS Wan 27: proxy tampering rejected independently of review
+PASS Wan 28: fabricated gap provenance rejected
+PASS Wan 29: invalid review dates rejected
+PASS Wan 30: Chinese path CSV round trip and manifest verification
+PASS Wan 31: existing preparation/output files are never overwritten
+PASS Wan 32: edited master file checksum invalidates export
+PASS Wan 33: duplicate lake/year source row rejected
+PASS Wan 34: incomplete source key universe rejected
+PASS Wan 35: unexpected missing sentinel and infinity fail explicitly
+
+All 35 Wan preprocessing contract tests passed.
+PASS: identical parameter table -> identical serial/PSOCK synthetic scores
+PASS: all original R files preserved; cali_ensemble original body/defaults retained; window named-only
+
+
+  _          _        _____                          _     _ ____  
+ | |    __ _| | _____| ____|_ __  ___  ___ _ __ ___ | |__ | |  _ \ 
+ | |   / _` | |/ / _ |  _| | '_ \/ __|/ _ | '_ ` _ \| '_ \| | |_) |
+ | |__| (_| |   |  __| |___| | | \__ |  __| | | | | | |_) | |  _ < 
+ |_____\__,_|_|\_\___|_____|_| |_|___/\___|_| |_| |_|_.__/|_|_| \_\
+                                                                   
+
+              https://github.com/aemon-j/LakeEnsemblR
+export_dirs complete!
+export_time complete!
+Replaced SIMULATION_PARAMS h_ML_in 16.05, with 16.05
+Replaced LAKE_PARAMS depth_w_lk 16.05, with 16.05
+Replaced LAKE_PARAMS latitude_lk 53.9, with 53.9
+export_location complete!
+Replaced METEO outputfile 'output/output.dat', with 'output/output.dat'
+export_output_settings complete!
+Loading met data...[2026-10-13 12:20:01.836361]
+Finished loading met data![2026-10-13 12:20:01.90213]
+Replaced SIMULATION_PARAMS del_time_lk 86400, with 86400
+Replaced SIMULATION_PARAMS time_step_number 200, with 31
+Replaced METEO meteofile 'all_meteo_file.dat', with 'all_meteo_file.dat'
+FLake: Created file ./FLake/all_meteo_file.dat
+export_meteo complete!
+Replaced SIMULATION_PARAMS T_wML_in 6.128, with 4.977
+Replaced SIMULATION_PARAMS T_bot_in 6.255, with 4.905
+Replaced SIMULATION_PARAMS h_ML_in 16.05, with 16.05
+FLake: Input initial conditions into ./FLake/native_config.nml
+   depths wtemp
+1     0.9 4.977
+2     2.5 4.965
+3     5.0 4.953
+4     8.0 4.941
+5    11.0 4.883
+6    14.0 4.887
+7    16.0 4.877
+8    18.0 4.986
+9    20.0 4.960
+10   22.0 4.944
+11   27.0 4.980
+12   32.0 4.951
+13   42.0 4.905
+export_init_cond complete!
+Replaced TRANSPARENCY extincoef_optic 0.98, with 0.98
+export_extinction complete!
+Replaced inflow Qfromfile .true., with .true.
+Loading inflow data...
+Replaced inflow time_step_number 200 with 32
+FLake: Created file ./FLake/Tinflow
+Loading outflow data...
+FLake does not need outflows, as mass fluxes are not considered.
+export_flow complete!
+Replaced  fetch_lk 2000, with 2000
+export_model_parameters complete!
+Replaced  c_relax_C 0.0030, with 0.003
+PASS F01: injected engine failure is reported with its exact stage and failure objective
+PASS F02: failed candidate permanently retains its requested parameters and contract
+PASS F03: engine console log is copied out of the disposable worker directory
+PASS F04: failed engine case retains exported master YAML and native namelist
+PASS F05: debug archive excludes forcing files and failed native outputs
+PASS F06: preparation failure does not invoke the model or use a preceding score
+PASS F07: preparation failure retains requested inputs without a stale master/log
+PASS F08: snapshot corruption is reported before export or engine execution
+PASS F09: snapshot rejection retains parameters without stale case configuration or log
+PASS F10: failure evidence survives deletion of the entire disposable worker
+
+All 10 failure-audit checks passed with actual configuration export and an intentionally failing engine stub.
+
+ALL numerical, regression, Wan-contract, and synthetic PSOCK checks completed.
+Warning messages:
+1: replacing previous import ‘stats::filter’ by ‘dplyr::filter’ when loading ‘gotmtools’ 
+2: replacing previous import ‘adagio::count’ by ‘dplyr::count’ when loading ‘glmtools’ 

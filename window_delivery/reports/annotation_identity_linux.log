@@ -1,0 +1,5 @@
+PASS: 70 baseline R scripts have identical executable expressions
+PASS: NAMESPACE executable directives unchanged
+PASS: DESCRIPTION changes only add legal annotation metadata
+PASS: Rd visible contents unchanged
+PASS: all nine supplied dependency archives unchanged

@@ -1,0 +1,3 @@
+Extension: 0.2.0
+Upstream git commit: 9f3135df691aa6b162c86b795c4f517d616f6efb
+Annotation: [LER-WINDOW NEW METADATA] extension metadata absent from official LER

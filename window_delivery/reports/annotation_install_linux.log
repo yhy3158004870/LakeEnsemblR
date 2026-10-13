@@ -1,0 +1,43 @@
+* installing *source* package ‘LakeEnsemblR’ ...
+** this is package ‘LakeEnsemblR’ version ‘1.2.9.9002’
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+Warning: replacing previous import ‘adagio::count’ by ‘dplyr::count’ when loading ‘glmtools’
+Warning: replacing previous import ‘stats::filter’ by ‘dplyr::filter’ when loading ‘gotmtools’
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘adagio::count’ by ‘dplyr::count’ when loading ‘glmtools’
+Warning: replacing previous import ‘stats::filter’ by ‘dplyr::filter’ when loading ‘gotmtools’
+
+
+  _          _        _____                          _     _ ____  
+ | |    __ _| | _____| ____|_ __  ___  ___ _ __ ___ | |__ | |  _ \ 
+ | |   / _` | |/ / _ |  _| | '_ \/ __|/ _ | '_ ` _ \| '_ \| | |_) |
+ | |__| (_| |   |  __| |___| | | \__ |  __| | | | | | |_) | |  _ < 
+ |_____\__,_|_|\_\___|_____|_| |_|___/\___|_| |_| |_|_.__/|_|_| \_\
+                                                                   
+
+              https://github.com/aemon-j/LakeEnsemblR
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘adagio::count’ by ‘dplyr::count’ when loading ‘glmtools’
+Warning: replacing previous import ‘stats::filter’ by ‘dplyr::filter’ when loading ‘gotmtools’
+
+
+  _          _        _____                          _     _ ____  
+ | |    __ _| | _____| ____|_ __  ___  ___ _ __ ___ | |__ | |  _ \ 
+ | |   / _` | |/ / _ |  _| | '_ \/ __|/ _ | '_ ` _ \| '_ \| | |_) |
+ | |__| (_| |   |  __| |___| | | \__ |  __| | | | | | |_) | |  _ < 
+ |_____\__,_|_|\_\___|_____|_| |_|___/\___|_| |_| |_|_.__/|_|_| \_\
+                                                                   
+
+              https://github.com/aemon-j/LakeEnsemblR
+** testing if installed package keeps a record of temporary installation path
+* DONE (LakeEnsemblR)

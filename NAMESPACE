@@ -90,3 +90,13 @@ importFrom(reshape2,melt)
 importFrom(stats,approx)
 importFrom(utils,packageDescription)
 importFrom(zoo,na.approx)
+# [LER-WINDOW ADD BEGIN M003] Eight public window interfaces.
+export(ler_modis_windows)
+export(ler_window_predict)
+export(calc_fit_window)
+export(ler_window_control)
+export(ler_read_window_surface)
+export(ler_window_probe)
+export(cali_window_ensemble)
+export(evaluate_window_best)
+# [LER-WINDOW ADD END M003]

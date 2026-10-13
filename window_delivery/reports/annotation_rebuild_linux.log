@@ -1,0 +1,55 @@
+[1] TRUE
+[1] TRUE
+[1] TRUE
+PASS 01: complete daily sample mean
+PASS 02: right endpoint excluded for sample mean
+PASS 03: four records in a single day rejected
+PASS 04: seven of eight values missing rejected
+PASS 05: late-start window rejected
+PASS 06: duplicate timestamps rejected
+PASS 07: unsorted timestamps rejected
+PASS 08: infinity rejected
+PASS 09: declared grid checked independently of first record
+PASS 10: common-year final window 5 days
+PASS 11: leap-year final window 6 days
+PASS 12: common-year midpoint at noon only as label
+PASS 13: windows reset every Jan 1
+PASS 14: invalid MODIS DOY rejected
+PASS 15: year-end does not include next year
+PASS 16: leap-year six-day mean
+PASS 17: trapezoidal time mean exact for a linear signal
+PASS 18: linear time mean requires right bracket
+PASS 19: linear time mean rejects internal gap
+PASS 20: linear time mean rejects missing bracket value
+PASS 21: subdaily periodic signal has correct integral
+PASS 22: midnight-only daily samples are not called exact daily means
+PASS 23: end-labeled interval means
+PASS 24: center-labeled interval means
+PASS 25: start-labeled interval means
+PASS 26: interval means reject gap
+PASS 27: partial first/last interval weighted by overlap
+PASS 28: irrelevant nonfinite data outside required window allowed
+PASS 29: cross-spinup approved window rejected
+PASS 30: fully contained window selected
+PASS 31: unapproved ice flag rejected
+PASS 32: duplicate window ID rejected
+PASS 33: overlapping approved windows rejected
+PASS 34: daily MyLake contract accepted
+PASS 35: artificial subdaily MyLake rejected
+PASS 36: unconfirmed contract rejected for production
+PASS 37: strict datetime format rejects trailing junk
+PASS 38: constant predictions retain valid RMSE despite undefined correlation
+PASS 39: metric NA is not silently removed
+PASS 40: bias sign is model minus observation
+PASS 41: LHC one point in every linear marginal stratum
+PASS 42: LHC one point in every logarithmic marginal stratum
+PASS 43: LHC exact seeded repeatability
+PASS 44: LHC model-specific parameter pools accepted
+PASS 45: out-of-bound parameter rejected
+PASS 46: duplicate par_id rejected
+PASS 47: scoring and prediction share one operator
+
+All 47 real-R numerical tests passed in this R session.
+
+Patched source generated and core numerical checks passed: /tmp/LER_annotated_rebuild 
+Install it into a separate R library; restart R before running models.

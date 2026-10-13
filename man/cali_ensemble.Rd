@@ -18,10 +18,14 @@ cali_ensemble(
   out_f = "cali",
   ncores = NULL,
   tmp_dir = NULL,
-  ...
+  ... ,
+% [LER-WINDOW MODIFIED M005] Named-only window usage after ... .
+  window = NULL
 )
 }
 \arguments{
+% [LER-WINDOW ADD M005] Documentation for the new window argument.
+\item{window}{NULL preserves the original route; a ler_window_control object enables the explicit-window LHC route. This is a named-only argument.}
 \item{config_file}{file path; to LakeEnsemblr yaml master config file}
 
 \item{num}{integer; the number of random parameter sets to generate. If param file is provided
