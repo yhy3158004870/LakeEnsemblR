@@ -1,0 +1,13 @@
+PASS S01: invalid UTF-8 Chinese headings are ignored bytewise
+PASS S02: uppercase digest is normalized
+PASS S03: ASCII space-separated hash remains supported
+PASS S04: ASCII tab and carriage return are supported
+PASS S05: multiple hashes are rejected
+PASS S06: prefixed hash is rejected
+PASS S07: short hash is rejected
+PASS S08: long hash is rejected
+PASS S09: output without a hash is rejected
+PASS S10: nonzero exit with a valid-looking hash is rejected
+PASS S11: real archive mismatch is rejected
+PASS S12: non-Windows filename bytes do not affect ASCII hash
+All 12 SHA256 encoding and rejection checks passed.

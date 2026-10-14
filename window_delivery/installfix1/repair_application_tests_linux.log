@@ -1,0 +1,8 @@
+Installer fix 1 applied successfully.
+Backup: /tmp/RtmpgC1Vpe/ler-fix1-repair-18c3a2b9a0474/records/sha256_fix1_20261014_164534
+No installed packages or startup configuration were changed.
+PASS: pinned helper updated; every unrelated manifest entry unchanged; original files backed up
+Installer fix 1 is already applied.
+PASS: repeated repair is idempotent
+PASS: modified repair helper rejected without changing bundle
+PASS: unexpected/custom original helper rejected without overwrite
