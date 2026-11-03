@@ -1,5 +1,10 @@
 <!-- [LER-WINDOW NEW SUPPORT FILE] Entire guide added relative to official LER. -->
 # LakeEnsemblR 窗口率定完整交付 v0.2.0（Win11 x64）
+当前源码包已在原标注版上追加 Simstrat 七列修复，版本为 **1.2.9.9003**；自动写入
+`Depth,U,V,T,S,k,eps`，其中 `S=0`。旧 ZIP、安装器和下方原交付说明属于历史版本，
+不应用它们重装覆盖本修复。新构建及验收说明见本次独立修复交付包。
+
+以下为原 v0.2.0 标注版说明：
 这是 **v0.2.0 标注版**：用 `[LER-WINDOW ...]` 标出相对官方的新增和修改；执行逻辑不变。详见 `docs/相对官方代码的修改清单.md` 与 `diff/official_to_window.patch`。注释/元数据会改变安装文件摘要，旧率定目录须用原构建库重跑；新标注版应创建新率定目录，不能混用构建物来绕过审计校验。
 
 派生 R 包版本：**1.2.9.9002**。固定上游：`aemon-j/LakeEnsemblR` 1.2.9，提交 `9f3135df691aa6b162c86b795c4f517d616f6efb`。许可仍为 GPL-2；保留原作者和模型依赖各自许可。本交付不是 LER 官方发布。

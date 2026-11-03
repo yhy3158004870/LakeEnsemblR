@@ -167,9 +167,14 @@ export_init_cond <- function(config_file,
       tmp_sim <- tmp
     }
     
-    df2 <- data.frame("Depth [m]" = -deps_sim, "U [m/s]" = 0, 	"V [m/s]" = 0,
-                      "T [deg C]" = tmp_sim,	"k [J/kg]" = 3e-6,	"eps [W/kg]" = 5e-10)
-    colnames(df2) <- c("Depth [m]",	"U [m/s]",	"V [m/s]",	"T [deg C]",	"k [J/kg]",	"eps [W/kg]")
+    # [LER-WINDOW SIMSTRAT7] Simstrat 3.0.1 reads seven positional fields:
+    # Depth, U, V, T, S, k, eps. Keep the existing freshwater assumption
+    # explicit; a missing S field shifts k/eps into the wrong variables.
+    df2 <- data.frame("Depth [m]" = -deps_sim, "U [m/s]" = 0, "V [m/s]" = 0,
+                      "T [deg C]" = tmp_sim, "S [ppt]" = 0,
+                      "k [J/kg]" = 3e-6, "eps [W/kg]" = 5e-10)
+    colnames(df2) <- c("Depth [m]", "U [m/s]", "V [m/s]", "T [deg C]",
+                      "S [ppt]", "k [J/kg]", "eps [W/kg]")
     
     write.table(df2, file.path("Simstrat", "init_cond.dat"),
                 sep = "\t", col.names = TRUE, row.names = FALSE, quote = FALSE)

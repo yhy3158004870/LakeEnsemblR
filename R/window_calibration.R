@@ -929,8 +929,8 @@ ler_read_window_surface <- function(config_file, model, contract, folder = ".") 
   if (!length(models) || anyDuplicated(models) || any(!models %in% .lw_models())) .lw_fail("Invalid models")
   .lw_initialize_runtime()
   version <- as.character(utils::packageVersion("LakeEnsemblR"))
-  if (version != "1.2.9.9002")
-    .lw_fail("Install the patched 1.2.9.9002 package before engine runs; found ", version)
+  if (version != "1.2.9.9003")
+    .lw_fail("Install the patched 1.2.9.9003 package before engine runs; found ", version)
   if (is.null(spin_up)) spin_up <- 0
   if (length(spin_up) != 1L || !is.finite(spin_up) || spin_up < 0) .lw_fail("Invalid spin_up days")
   if (dir.exists(out_dir) || file.exists(out_dir)) .lw_fail("Use a new, nonexistent result directory: ", out_dir)
@@ -949,7 +949,7 @@ ler_read_window_surface <- function(config_file, model, contract, folder = ".") 
   .lw_write_csv(cal, file.path(result_dir, "windows_calibration.csv"))
   .lw_write_csv(contracts, file.path(result_dir, "contracts.csv"))
   ns_names <- ls(asNamespace("LakeEnsemblR"), all.names = TRUE)
-  funcs <- sort(unique(c("get_output", "read_flake_out", "export_config", "input_config_value", "cali_ensemble",
+  funcs <- sort(unique(c("get_output", "read_flake_out", "export_config", "export_init_cond", "input_config_value", "cali_ensemble",
     "ler_modis_windows", "ler_window_predict", "calc_fit_window", "ler_window_control",
     "ler_read_window_surface", "ler_window_probe", "cali_window_ensemble", "evaluate_window_best",
     grep("^\\.lw_", ns_names, value = TRUE))))

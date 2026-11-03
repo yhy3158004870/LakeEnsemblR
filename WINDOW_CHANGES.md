@@ -1,5 +1,25 @@
 # 相对官方 LakeEnsemblR 的修改标注
 
+## 2026-10-26：Simstrat 七列初始化修复，包版本 1.2.9.9003
+
+本节描述在窗口版基线 `7bd7f1e4ff9de1f9e9cac29ec7ea3c1804c1eab9`
+之后的独立修复。下方 v0.2.0 标注版说明及 `window_delivery/` 中的 ZIP、摘要和
+历史日志继续作为旧构建证据保存，不代表本次修复后的源码和测试结果。
+
+- `R/export_init_cond.R` 的 Simstrat 分支由六列改为
+  `Depth,U,V,T,S,k,eps`，第5列明确写 `S=0`；U/V、k/eps、深度补零及温度精度逻辑不变。
+  不增加盐度输入入口或率定参数，初温 CSV 仍为官方两列格式。
+- `DESCRIPTION` 将派生包版本升至 `1.2.9.9003`，记录协议字段；
+  `R/window_calibration.R` 同步其版本检查，并将 `export_init_cond` 加入运行函数摘要。
+- `tests/testthat/test-simstrat-seven-columns.R` 检查列序、每行字段数、淡水常数、
+  深度/温度保持、补零和重复导出；`inst/window_patch/VERSION.txt` 记录新构建来源。
+- 其他四模型的初始化导出和预编译求解器不在本次修改范围。
+
+本修复使用新结果目录。旧六列组合生成的 Simstrat 科研模拟和率定须在修复后重新验收、
+重跑；旧最优参数不能作为已重新率定的结果。Linux 测试不能替代实际 Windows 验收。
+
+以下是历史 v0.2.0 标注版说明。
+
 对比基准是官方 `aemon-j/LakeEnsemblR` 的 **1.2.9**，固定提交 `9f3135df691aa6b162c86b795c4f517d616f6efb`；不是你的 fork 当前可能变化的最新提交，也不是 v0.1.0 补丁包。
 
 本交付为 v0.2.0 的**标注版**，R 包版本仍为 `1.2.9.9002`。添加注释和元数据，没有修改窗口科学执行表达式。搜索 `[LER-WINDOW` 可以定位标记。`window_delivery/diff/official_to_window.patch` 是可在固定官方源码上应用的完整统一差异；`window_delivery/diff/file_changes.csv` 列出每个变更文件及变更前后 SHA256。

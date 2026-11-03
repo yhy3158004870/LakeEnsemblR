@@ -1,0 +1,14 @@
+报告审阅备注（给交付整合者，2026-11-03）
+
+1. 已确认来源：现有Run_two_lakes_R4ice.R、LakeEnsemblR/R/window_calibration.R、当前四模型配置生成器、实际上传的Feldbauer2025论文PDF及LakeEnsemblR参考文献。
+2. 用户只提供两湖完成标志及21:30至次日04:15总墙钟6.75h。尚未收到新的两湖metrics/selected_parameters/pairs/phase_times；不能写RMSE排名、误差改善百分比、Namco最优p_sw_ice或“4000候选零失败”。运行器成功阈值为各模型至少95%。
+3. 控制台末尾p_sw_ice=2.66357126951292不能单独确认是Namco最优值或任何共同最优值，应读selected_parameters.csv。
+4. 安装包代理已从用户历史A0001实际Windowsmetadata核实R4.6.0ucrt、LER1.2.9.9003、FLakeR0.0.9、GLM3r3.1.17、GOTMr0.0.0.10、SimstratR0.0.9、MyLakeR0.0.1.9002；报告已增加历史指纹表。用户WindowsGLM可执行文件归档路径实际为GLM3r/extbin/glm-3.0.5_x64/glm.exe，准确运行版本待最新engine_console横幅核对；此前GLM3.1.1为Linux短测引擎，不能写成Windows引擎。Simstrat301路径对应3.0.1。新两湖清单仍待上传复核。不要把Linux源包称为当前Windows原安装库的逐字节替代，也不把接口包版本误写为原生引擎版本。
+5. 新路径暂按配置代理C:/.../yaml/r4_ice_20261103_core12，运行代理D:/LER4_ice_20261103/n500_c12；发布前与最终入口同步。报告明确以README实际路径为准。
+6. 原69湖清单spin_up_days全为0.0；1979-2000是不评分导入时段，不等于显式参数22年。不要把两者混写。
+7. 四模型已批准原生契约sample_mean：每日点状态在观察窗内等权取样均值。不是经过验证的连续24h均值，也不能把FILTER日夜组合LSWT称为24h实测均温。
+8. ice_free标志是用户临时FILTER_DN>0°C温度代理，缺少独立全窗冰情确认。Simstrat盐度初始S=0也需披露。
+9. Puhu70m新YAML和初温副本已描述；新_manifest应同步depth_m=70和实际生成输入路径，旧已完成两湖目录不改。配置代理已修正这一新发布项。
+10. GLMdisable_evap核对官方提交ccd1294...的作用为SurfData.Evap=0；前面的Q_latentheat计算仍保留，不能说关闭所有蒸发冷却。该源码版本不自动等于用户Windows二进制，报告已注明版本核对边界。
+11. Gaudard2019真实标题是Toward an open access ... Swiss lakes using Simstrat v2.1，页3955-3974，不使用此前可能出现的不准确简写标题。
+12. 当前不自动做δ/S1。扩展敏感性分析、误差块bootstrap和新冰情机制验证均在报告中明确为后续环节。

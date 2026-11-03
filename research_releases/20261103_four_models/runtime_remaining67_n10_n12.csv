@@ -1,0 +1,5 @@
+﻿remaining_lakes,models,lhc_per_model,workers,summed_case_median_seconds,analytical_days,analytical_plus30pct_days,two_lake_empirical_factor,empirically_scaled_days,note
+67,4,500,10,7594.0,4.482569444444445,5.827340277777778,1.777875329236172,7.9694496268656705,Planning estimate; new two-lake phase times not supplied; excludes delta/S1 bootstrap
+67,4,500,12,7594.0,3.750123456790123,4.87516049382716,1.777875329236172,6.667251975417032,Planning estimate; new two-lake phase times not supplied; excludes delta/S1 bootstrap
+67,4,2000,10,7594.0,17.666597222222222,22.96657638888889,1.777875329236172,31.409007352941178,Planning estimate; new two-lake phase times not supplied; excludes delta/S1 bootstrap
+67,4,2000,12,7594.0,14.736813271604936,19.157857253086416,1.777875329236172,26.200216747146612,Planning estimate; new two-lake phase times not supplied; excludes delta/S1 bootstrap

@@ -1,3 +1,6 @@
 Extension: 0.2.0
+Package: 1.2.9.9003
+Simstrat initialization: Depth,U,V,T,S,k,eps; freshwater S=0
+Simstrat fix baseline: 7bd7f1e4ff9de1f9e9cac29ec7ea3c1804c1eab9
 Upstream git commit: 9f3135df691aa6b162c86b795c4f517d616f6efb
 Annotation: [LER-WINDOW NEW METADATA] extension metadata absent from official LER

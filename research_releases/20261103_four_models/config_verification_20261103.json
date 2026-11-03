@@ -1,0 +1,26 @@
+{
+  "fixture_output": "/tmp/config_release69_lh70clvh/config",
+  "protected_source_and_completed_two_unchanged": true,
+  "registry_counts": [
+    69,
+    67,
+    2
+  ],
+  "parameter_design_counts": [
+    621,
+    603,
+    18
+  ],
+  "passed": [
+    "actual69YAML configuration",
+    "exact67 exclusion and actualuniqueNAME_ID",
+    "Puhu70m profile and geometry",
+    "completed-two canonical identity",
+    "idempotent rerun",
+    "different destination rejection",
+    "duplicateID rejection",
+    "scientific setting drift rejection",
+    "C/D content-addressed input staging"
+  ],
+  "limits": "Software fixture uses actual uploaded masterYAMLs but placeholder environmental input bytes; no Windows model run claimed"
+}

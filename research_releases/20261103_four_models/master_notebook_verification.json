@@ -1,0 +1,12 @@
+{
+  "passed": [
+    "Python allcells parse",
+    "full embedded source bytehash",
+    "helper raw SHA preserved",
+    "explicit nested-source paths before formalcall",
+    "12workers and oldtwo roots",
+    "identical writer rerun"
+  ],
+  "test_output": "/tmp/r67_master_writer_iv3abqw_",
+  "models_run": false
+}
