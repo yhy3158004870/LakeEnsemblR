@@ -625,6 +625,21 @@ r4_prepare_local_parallel <- function(ncores = 10L) {
   canonical(cfg)
 }
 
+.r67_window_table_equal <- function(actual, expected, label) {
+  .r4_need(is.data.frame(actual) && is.data.frame(expected), label, ": expected data frames")
+  .r4_need(identical(names(actual), names(expected)) && nrow(actual) == nrow(expected),
+    label, ": window table shape/order differs")
+  for (field in c("window_start", "window_end")) {
+    .r4_need(field %in% names(actual), label, ": missing timestamp field: ", field)
+    got <- as.numeric(.r4_private(".lw_utc")(actual[[field]], field))
+    want <- as.numeric(.r4_private(".lw_utc")(expected[[field]], field))
+    .r4_need(identical(got, want), label, ": UTC instant differs: ", field)
+    actual[[field]] <- got
+    expected[[field]] <- want
+  }
+  .rr_table_equal(actual, expected, label)
+}
+
 .r67_verify_completed_two <- function(completed_root, config_root, old_CFG, all_rows) {
   completed_root <- .r4_norm(completed_root)
   rows <- list()
@@ -658,7 +673,7 @@ r4_prepare_local_parallel <- function(ncores = 10L) {
     .r4_need(identical(.r67_semantic_config(ctx$base, ctx$snapshot),
       .r67_semantic_config(cfg, config_root)), "Completed lake and new 67-lake scheme inputs/physics differ: ", name)
     windows <- .r4_private(".lw_windows")(file.path(old_CFG$windows_dir, paste0(name, "_MODIS_windows_reviewed.csv")))
-    .rr_table_equal(ctx$windows, windows, paste("Unchanged reviewed windows", name))
+    .r67_window_table_equal(ctx$windows, windows, paste("Unchanged reviewed windows", name))
     contracts <- .r4_private(".lw_contracts")(file.path(old_CFG$contracts_dir,
       paste0(name, "_output_contracts.csv")), .r4_models, require_confirmed = TRUE)
     .rr_table_equal(ctx$contracts, contracts, paste("Unchanged time contracts", name))

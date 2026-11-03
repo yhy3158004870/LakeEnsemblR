@@ -48,6 +48,8 @@ ALL_69_FOUR_MODELS_CALIBRATION_EVALUATION_PASSED
 
 ## 验证与来源
 
+时间复核修正：双方window_start/window_end按精确UTC时刻比较，避免午夜POSIXct显示省略时分秒引起误判。原helper、观测CSV、已完成两湖和模型包保持原状；真实时间、观测或筛选标志变化仍会拒绝。已追加真实Windows上下文和完整未mock两湖封存复核测试。
+
 已完成69/67/2名单、配置保护、Puhu70m、实际12进程通信、输入与快照、500参数池、续算及67湖批次控制的软件测试。模型完整运行在用户Windows主机执行。
 
 9003源码124个函数与校验安装库匹配、57个函数与用户历史Windows运行指纹匹配，32个vendor原生文件与其Windows清单匹配。GLM3r接口版本3.1.17不等于引擎版本；Windows归档路径glm-3.0.5_x64/glm.exe，准确横幅版本仍待新日志核对。Linux短测GLM3.1.1不称为用户Windows引擎版本。

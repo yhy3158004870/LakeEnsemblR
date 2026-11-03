@@ -5,8 +5,10 @@
     "helper raw SHA preserved",
     "explicit nested-source paths before formalcall",
     "12workers and oldtwo roots",
-    "identical writer rerun"
+    "identical writer rerun",
+    "UTC window fix embedded and writer rerun"
   ],
   "test_output": "/tmp/r67_master_writer_iv3abqw_",
-  "models_run": false
+  "models_run": false,
+  "fixed_runner_sha256": "66957a5556f24dd99bb577d5d88d900f972845a82b09d60d4e7492c98ce2c989"
 }

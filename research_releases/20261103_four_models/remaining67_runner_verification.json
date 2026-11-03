@@ -14,7 +14,7 @@
   "completed_two_root": "D:/LER4_ice_20261102/n500",
   "old_two_preserved": true,
   "sha256": {
-    "Run_remaining67_R4ice_12.R": "8b757a08b79f3ef7889a228feb067dd7062c14582158bc433d3580a3f71c2a50",
+    "Run_remaining67_R4ice_12.R": "66957a5556f24dd99bb577d5d88d900f972845a82b09d60d4e7492c98ce2c989",
     "START_remaining67_core12.R": "3beea6b9fc083e1038b4687e77196facf1ae1b73e010072011e2c6f04930c3a3"
   },
   "passed_checks": [
@@ -29,7 +29,11 @@
     "67cohort per-lake probe failure and late external input failure continue",
     "67cohort retry only2failed and completedtwo exclusion",
     "global source/runtime change fatal",
-    "port options do not alter mathematical request hashes"
+    "port options do not alter mathematical request hashes",
+    "real uploaded Windows midnight context regression",
+    "exact UTC window comparison rejects 1 second and fractional changes",
+    "unmocked completed-two full verifier and artifact preservation",
+    "window-check source patch backup/idempotency/activebatch refusal"
   ],
   "limits": "Software fixture tests only; no remote access to user Windows 67-lake full-period simulations or new two-lake metrics."
 }
